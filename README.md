@@ -1,2 +1,0 @@
-# ngMadLibs
-AngularJS - MadLibs

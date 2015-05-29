@@ -1,0 +1,92 @@
+body {
+	height: 100%;
+}
+
+* {
+	font-family: "Comic Sans MS";
+}
+
+.container {
+	margin-top: 10%;
+	width: 750px;
+	height: 880px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+}
+
+#header-container {
+	height: 144px;
+	width: 750px;
+	border-bottom: 2px solid black;
+}
+
+#smiley-image {
+	height: 100px;
+	width: 100px;
+	margin: 20px;
+}
+
+#smiley-image-container {
+	display: inline-block;
+	height: 144px;
+	width: 140px;
+	border-right: 2px solid black;
+}
+
+#mad-libs-img-container {
+	position: absolute;
+	display: inline-block;
+	height: 58px;
+	width: 230px;
+	margin-left: 183px;
+	margin-right: 40px;
+	margin-top: 15px;
+}
+
+#mad-libs-img {
+	position: relative;
+	height: 58px;
+	width: 230px;
+}
+
+#automate {
+	position: absolute;
+	display: inline;
+	text-align: center;
+	font-weight: lighter;
+	margin-left: 183px;
+	margin-top: 80px;
+	padding: 0px;
+}
+
+.words {
+	height: 300px;
+	width: 100%;
+}
+
+#provide {
+	font-size: 1.3em;
+	padding-top: 3%;
+}
+
+.madlibs {
+	height: 440px;
+	width: 100%;
+	border-top: 2px solid black;
+}
+
+p {
+	font-size: 1.2em;
+	padding-left: 7%;
+}
+
+#p1 {
+	padding-top: 5%;
+	padding-right: 6%;
+}
+
+#p2 {
+	padding-right: 6%;
+	padding-top: 3%;
+}
