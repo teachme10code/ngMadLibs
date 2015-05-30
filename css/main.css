@@ -7,29 +7,33 @@ body {
 }
 
 .container {
-	margin-top: 10%;
-	width: 750px;
-	height: 880px;
+	margin-top: 2%;
+	width: 670px;
+	height: 750px;
 	margin-left: auto;
 	margin-right: auto;
 	border: 2px solid black;
+	border-radius: 4px;
 }
 
 #header-container {
-	height: 144px;
-	width: 750px;
+	height: 125px;
+	width: 670px;
 	border-bottom: 2px solid black;
 }
 
 #smiley-image {
 	height: 100px;
 	width: 100px;
-	margin: 20px;
+	margin-top: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 15px;
 }
 
 #smiley-image-container {
 	display: inline-block;
-	height: 144px;
+	height: 125px;
 	width: 140px;
 	border-right: 2px solid black;
 }
@@ -39,9 +43,9 @@ body {
 	display: inline-block;
 	height: 58px;
 	width: 230px;
-	margin-left: 183px;
+	margin-left: 145px;
 	margin-right: 40px;
-	margin-top: 15px;
+	margin-top: 13px;
 }
 
 #mad-libs-img {
@@ -55,23 +59,49 @@ body {
 	display: inline;
 	text-align: center;
 	font-weight: lighter;
-	margin-left: 183px;
-	margin-top: 80px;
+	margin-left: 125px;
+	margin-top: 55px;
 	padding: 0px;
+	font-size: 2.5em;
 }
 
 .words {
-	height: 300px;
+	height: 235px;
 	width: 100%;
 }
 
 #provide {
 	font-size: 1.3em;
-	padding-top: 3%;
+	padding-top: 1.5%;
+}
+
+.words-container {
+	width: 550px;
+	height: 135px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input {
+	position: relative;
+	height: 30px;
+	border-radius: 4px;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	font-size: 1em;
+	margin-right: 8px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+}
+
+input:hover {
+	cursor: text;
 }
 
 .madlibs {
-	height: 440px;
+	height: 300px;
 	width: 100%;
 	border-top: 2px solid black;
 }
@@ -82,11 +112,15 @@ p {
 }
 
 #p1 {
-	padding-top: 5%;
+	padding-top: 2%;
 	padding-right: 6%;
 }
 
 #p2 {
 	padding-right: 6%;
-	padding-top: 3%;
+	padding-top: 1%;
+}
+
+.input-word {
+	color: #A50000;
 }
