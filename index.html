@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>ngMadLibs</title>
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="img/mad-lib-happy-face.png">
 		<link rel="stylesheet" href="css/main.css">
 		<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+		<script src="js/myApp.js"></script>
 	</head>
-	<body ng-app="">
-		<div class="container">
+	<body ng-app="myApp">
+		<div class="container" ng-controller="MadLibController">
 			<div id="header-container">
 				<div id="smiley-image-container">
 					<img id="smiley-image" src="img/mad-lib-happy-face.png">
@@ -16,28 +18,27 @@
 				<div id="mad-libs-img-container">
 					<img id="mad-libs-img" src="img/ng-mad-libs.png">
 				</div>
-				<h1 id="automate">Automate This!</h1>
 			</div>
-			<div class="words" ng-init="value=[false, false, false, false, false, false, false, false, false, false]">
+			<div class="words">
 				<p id="provide">Provide the following words:</p>
 				<form>
 					<div class="words-container">
-						<input type="text" placeholder="Female name" ng-model="female_name" ng-change="value[0]=true">
-						<input type="text" placeholder="Job title" ng-model="job_title" ng-change="value[1]=true">
-						<input type="text" placeholder="Tedious task" ng-model="tedious_task" ng-change="value[2]=true">
-						<input type="text" placeholder="Dirty task" ng-model="dirty_task" ng-change="value[3]=true">
-						<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-change="value[4]=true">
-						<input type="text" placeholder="Useless skill" ng-model="useless_skill" ng-change="value[5]=true">
-						<input type="text" placeholder="Adjective" ng-model="adjective" ng-change="value[6]=true">
-						<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity" ng-change="value[7]=true">
-						<input type="text" placeholder="Huge number" ng-model="huge_number" ng-change="value[8]=true">
+						<input type="text" placeholder="Female name" ng-model="female_name">
+						<input type="text" placeholder="Job title" ng-model="job_title">
+						<input type="text" placeholder="Tedious task" ng-model="tedious_task">
+						<input type="text" placeholder="Dirty task" ng-model="dirty_task">
+						<input type="text" placeholder="Celebrity" ng-model="celebrity">
+						<input type="text" placeholder="Useless skill" ng-model="useless_skill">
+						<input type="text" placeholder="Adjective" ng-model="adjective">
+						<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity">
+						<input type="text" placeholder="Huge number" ng-model="huge_number">
 					</div>
 				</form>
 			</div>
 			<div class="madlibs">
-				<p id="p1"><span class="input-word">{{female_name}}</span><span ng-hide="value[0]">__________</span> was a <span class="input-word">{{job_title}}</span><span ng-hide="value[1]">__________</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="input-word">{{tedious_task}}</span><span ng-hide="value[2]">__________</span> and <span class="input-word">{{dirty_task}}</span><span ng-hide="value[3]">__________</span>. So, <span class="input-word">{{female_name}}</span><span ng-hide="value[0]">__________</span> met with her life mentor <span class="input-word">{{celebrity}}</span><span ng-hide="value[4]">__________</span> who told her to learn how to <span class="input-word">{{useless_skill}}</span><span ng-hide="value[5]">__________</span> with Thinkful. Thinkful didn't offer a course on <span class="input-word">{{useless_skill}}</span><span ng-hide="value[5]">__________</span> so she studied programming instead.</p>
+				<p id="p1"><span class="input-word">{{female_name}}</span><span ng-hide="female_name">__________</span> was a <span class="input-word">{{job_title}}</span><span ng-hide="job_title">__________</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="input-word">{{tedious_task}}</span><span ng-hide="tedious_task">__________</span> and <span class="input-word">{{dirty_task}}</span><span ng-hide="dirty_task">__________</span>. So, <span class="input-word">{{female_name}}</span><span ng-hide="female_name">__________</span> met with her life mentor <span class="input-word">{{celebrity}}</span><span ng-hide="celebrity">__________</span> who told her to learn how to <span class="input-word">{{useless_skill}}</span><span ng-hide="useless_skill">__________</span> with Thinkful. Thinkful didn't offer a course on <span class="input-word">{{useless_skill}}</span><span ng-hide="useless_skill">__________</span> so she studied programming instead.</p>
 				
-				<p id="p2">What a great decision! With her new skills,<span class="input-word"> {{female_name}} </span><span ng-hide="value[0]">__________</span>built a(n)<span class="input-word"> {{adjective}} </span><span ng-hide="value[6]">__________</span>robot named<span class="input-word"> {{obnoxiuous_celebrity}} </span><span ng-hide="value[7]">__________</span>that not only loved<span class="input-word"> {{dirty_task}} </span><span ng-hide="value[3]">__________</span>but did it<span class="input-word"> {{huge_number}} </span><span ng-hide="value[8]">__________</span>times faster!</p>
+				<p id="p2">What a great decision! With her new skills,<span class="input-word"> {{female_name}} </span><span ng-hide="female_name">__________</span>built a(n)<span class="input-word"> {{adjective}} </span><span ng-hide="adjective">__________</span>robot named<span class="input-word"> {{obnoxiuous_celebrity}} </span><span ng-hide="obnoxiuous_celebrity">__________</span>that not only loved<span class="input-word"> {{dirty_task}} </span><span ng-hide="dirty_task">__________</span>but did it<span class="input-word"> {{huge_number}} </span><span ng-hide="huge_number">__________</span>times faster!</p>
 			</div>
 		</div>
 	</body>

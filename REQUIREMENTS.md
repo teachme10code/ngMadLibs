@@ -2,12 +2,10 @@
 
 Requirements
 
-Your app must achieve a high approximation of the sketch (and colors are true to original!)
-You must use the following image assets, which you can save to your project directory for this assignment:
-ngMadLibs Logo
-ngMadLibs Smiley face
-You're free to create your own Mad Libs text from scratch, but if you want to use the text from the sketch, you can find it here.
-For this version of the app, when a user inputs text in any of the inputs at the top of the page, the text at the bottom should update automatically. For instance, when you set the value of "female name" to "Sue" in the top of the interface, all instances of the {{female name}} placeholder text should be replaced with "Sue".
-When you've completed this assignment, save it to GitHub, and publish a branch using GitHub pages like you did in Lesson 1. Share a link to the page and your GitHub repo on Slack and with your Mentor.
-Be ready to discuss your app and the decisions you made with your Mentor at your next session.
+Take your existing Mad Libs app, and create a new branch where you reimplement it using one controller.
+The end product should look and feel exactly the same as the original.
+When you have completed the assignment, push this branch up to GitHub and share a link to it with your mentor.
+Remember, you'll need to create an external JavaScript file that creates a module for this app and that adds a controller to that module. You'll need to link to this file in your HTML template.
+In turn, you'll need to use ng-app to link to your module to your HTML. You'll also need to use ng-controller to give your controller control over the relevant part of the DOM.
+When you've completed this assignment, you should merge your feature branch back into master, and push your changes up to GitHub.
 
