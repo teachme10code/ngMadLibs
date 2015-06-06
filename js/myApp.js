@@ -1,14 +1,10 @@
-//ngMadLibs refactor1
+//ngMadLibs refactor2
 
 angular.module('myApp', [])
-	.controller('MadLibController', function($scope){
-		$scope.female_name;
-		$scope.job_title;
-		$scope.tedious_task;
-		$scope.dirty_task;
-		$scope.celebrity;
-		$scope.useless_skill;
-		$scope.adjective;
-		$scope.obnoxiuous_celebrity;
-		$scope.huge_number;
+	.controller('MadLibController', function($scope) {
+		$scope.showMadLibs = false;
+
+		$scope.submit = function() {
+			$scope.showMadLibs = true;
+		};
 	});

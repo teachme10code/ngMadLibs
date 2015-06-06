@@ -21,24 +21,25 @@
 			</div>
 			<div class="words">
 				<p id="provide">Provide the following words:</p>
-				<form>
-					<div class="words-container">
-						<input type="text" placeholder="Female name" ng-model="female_name">
-						<input type="text" placeholder="Job title" ng-model="job_title">
-						<input type="text" placeholder="Tedious task" ng-model="tedious_task">
-						<input type="text" placeholder="Dirty task" ng-model="dirty_task">
-						<input type="text" placeholder="Celebrity" ng-model="celebrity">
-						<input type="text" placeholder="Useless skill" ng-model="useless_skill">
-						<input type="text" placeholder="Adjective" ng-model="adjective">
-						<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity">
-						<input type="text" placeholder="Huge number" ng-model="huge_number">
-					</div>
-				</form>
+				<div class="words-container">
+					<form name="mlForm" ng-submit="submit()">
+							<input type="text" placeholder="Female name" ng-model="female_name" ng-minlength="1" required>
+							<input type="text" placeholder="Job title" ng-model="job_title" ng-minlength="1" required>
+							<input type="text" placeholder="Tedious task" ng-model="tedious_task" ng-minlength="1" required>
+							<input type="text" placeholder="Dirty task" ng-model="dirty_task" ng-minlength="1" required>
+							<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-minlength="1" required>
+							<input type="text" placeholder="Useless skill" ng-model="useless_skill" ng-minlength="1" required>
+							<input type="text" placeholder="Adjective" ng-model="adjective" ng-minlength="1" required>
+							<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity" ng-minlength="1" required>
+							<input type="text" placeholder="Huge number" ng-model="huge_number" ng-minlength="1" required>
+						<button type="submit">Generate My Mad Lib</button>
+					</form>
+				</div>
 			</div>
-			<div class="madlibs">
-				<p id="p1"><span class="input-word">{{female_name}}</span><span ng-hide="female_name">__________</span> was a <span class="input-word">{{job_title}}</span><span ng-hide="job_title">__________</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="input-word">{{tedious_task}}</span><span ng-hide="tedious_task">__________</span> and <span class="input-word">{{dirty_task}}</span><span ng-hide="dirty_task">__________</span>. So, <span class="input-word">{{female_name}}</span><span ng-hide="female_name">__________</span> met with her life mentor <span class="input-word">{{celebrity}}</span><span ng-hide="celebrity">__________</span> who told her to learn how to <span class="input-word">{{useless_skill}}</span><span ng-hide="useless_skill">__________</span> with Thinkful. Thinkful didn't offer a course on <span class="input-word">{{useless_skill}}</span><span ng-hide="useless_skill">__________</span> so she studied programming instead.</p>
+			<div ng-if="showMadLibs" ng-animate="">
+				<p id="p1">{{female_name | uppercase}} was a {{job_name | uppercase}} who loved technology. Although she loved parts of her job, she absolutely hated {{tedious_task | uppercase}} and {{dirty_task | uppercase}}. So, {{female_name | uppercase}} met with her life mentor {{celebrity | uppercase}} who told her to learn how to {{useless_skill | uppercase}} with Thinkful. Thinkful didn't offer a course on {{useless_skill | uppercase}} so she studied programming instead.</p>
 				
-				<p id="p2">What a great decision! With her new skills,<span class="input-word"> {{female_name}} </span><span ng-hide="female_name">__________</span>built a(n)<span class="input-word"> {{adjective}} </span><span ng-hide="adjective">__________</span>robot named<span class="input-word"> {{obnoxiuous_celebrity}} </span><span ng-hide="obnoxiuous_celebrity">__________</span>that not only loved<span class="input-word"> {{dirty_task}} </span><span ng-hide="dirty_task">__________</span>but did it<span class="input-word"> {{huge_number}} </span><span ng-hide="huge_number">__________</span>times faster!</p>
+				<p id="p2"> What a great decision! With her new skills, {{female_name | uppercase}} built a(n) {{adjective | uppercase}} robot named {{obnoxiuous_celebrity | uppercase}} that not only loved {{dirty_task | uppercase}} but did it {{huge_number | uppercase}} times faster! </p>
 			</div>
 		</div>
 	</body>
