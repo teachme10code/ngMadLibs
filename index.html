@@ -19,27 +19,28 @@
 					<img id="mad-libs-img" src="img/ng-mad-libs.png">
 				</div>
 			</div>
-			<div class="words-container">
+			<div class="words-container" ng-hide="showMadLibs" ng-show="!showMadLibs">
 				<p id="provide">Provide the following words:</p>
 				<div class="words">
-					<form name="mlForm" ng-submit="submit()">
-							<input type="text" placeholder="Female name" ng-model="female_name" ng-minlength="1" required>
-							<input type="text" placeholder="Job title" ng-model="job_title" ng-minlength="1" required>
-							<input type="text" placeholder="Tedious task" ng-model="tedious_task" ng-minlength="1" required>
-							<input type="text" placeholder="Dirty task" ng-model="dirty_task" ng-minlength="1" required>
-							<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-minlength="1" required>
-							<input type="text" placeholder="Useless skill" ng-model="useless_skill" ng-minlength="1" required>
-							<input type="text" placeholder="Adjective" ng-model="adjective" ng-minlength="1" required>
-							<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity" ng-minlength="1" required>
-							<input type="text" placeholder="Huge number" ng-model="huge_number" ng-minlength="1" required>
-						<button type="submit">Generate My Mad Lib</button>
+					<form name="mlForm" ng-submit="madLibValid()">
+							<input type="text" placeholder="Female name" ng-model="female_name" ng-minlength="1" ng-maxlength="25"required>
+							<input type="text" placeholder="Job title" ng-model="job_title" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Tedious task" ng-model="tedious_task" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Dirty task" ng-model="dirty_task" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Useless skill" ng-model="useless_skill" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Adjective" ng-model="adjective" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity" ng-minlength="1" ng-maxlength="25" required>
+							<input type="number" min="1" placeholder="Huge number" ng-model="huge_number" required>
+						<button ng-disabled="mlForm.$invalid" type="submit">Generate My Mad Lib</button>
 					</form>
 				</div>
 			</div>
-			<div ng-if="showMadLibs" class="madlibs" ng-animate="">
-				<p id="p1">{{female_name | uppercase}} was a {{job_name | uppercase}} who loved technology. Although she loved parts of her job, she absolutely hated {{tedious_task | uppercase}} and {{dirty_task | uppercase}}. So, {{female_name | uppercase}} met with her life mentor {{celebrity | uppercase}} who told her to learn how to {{useless_skill | uppercase}} with Thinkful. Thinkful didn't offer a course on {{useless_skill | uppercase}} so she studied programming instead.</p>
+			<div class="madlibs" ng-if="showMadLibs">
+				<p><span>{{female_name}} </span>was a <span>{{job_name}} </span>who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tedious_task}} </span>and<span> {{dirty_task}}</span>. So, <span> {{female_name}} </span>met with her life mentor <span> {{celebrity}} </span> who told her to learn how to <span> {{useless_skill}} </span> with Thinkful. Thinkful didn't offer a course on <span> {{useless_skill}} </span> so she studied programming instead.</p>
 				
-				<p id="p2"> What a great decision! With her new skills, {{female_name | uppercase}} built a(n) {{adjective | uppercase}} robot named {{obnoxiuous_celebrity | uppercase}} that not only loved {{dirty_task | uppercase}} but did it {{huge_number | uppercase}} times faster! </p>
+				<p>What a great decision! With her new skills, <span> {{female_name}} </span>built a(n) <span> {{adjective}} </span> robot named <span> {{obnoxiuous_celebrity}} </span>that not only loved <span> {{dirty_task}} </span> but did it <span> {{huge_number}} </span>times faster!</p>
+				<button id="reset" ng-click="resetForm()">Reset My Mad Lib</button>
 			</div>
 		</div>
 	</body>

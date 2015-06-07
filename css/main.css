@@ -113,22 +113,25 @@ button:hover {
 }
 
 .madlibs {
-	height: 280px;
+	height: 300px;
 	width: 100%;
-	border-top: 2px solid black;
+	padding-top: 20px;
 }
 
 p {
 	font-size: 1.2em;
 	padding-left: 7%;
-}
-
-#p1 {
-	padding-top: 3%;
 	padding-right: 6%;
 }
 
-#p2 {
-	padding-right: 6%;
-	padding-top: 1%;
+span {
+	color: white;
+}
+
+#reset {
+	float: right;
+	height: 40px;
+	font-size: 15px;
+	margin-top: 13px;
+	margin-right: 82.5px;
 }
