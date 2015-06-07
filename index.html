@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>ngMadLibs</title>
-		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="img/mad-lib-happy-face.png">
 		<link rel="stylesheet" href="css/main.css">
 		<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
@@ -19,9 +19,9 @@
 					<img id="mad-libs-img" src="img/ng-mad-libs.png">
 				</div>
 			</div>
-			<div class="words">
+			<div class="words-container">
 				<p id="provide">Provide the following words:</p>
-				<div class="words-container">
+				<div class="words">
 					<form name="mlForm" ng-submit="submit()">
 							<input type="text" placeholder="Female name" ng-model="female_name" ng-minlength="1" required>
 							<input type="text" placeholder="Job title" ng-model="job_title" ng-minlength="1" required>
