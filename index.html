@@ -23,23 +23,23 @@
 				<p id="provide">Provide the following words:</p>
 				<div class="words">
 					<form name="mlForm" ng-submit="madLibValid()">
-							<input type="text" placeholder="Female name" ng-model="female_name" ng-minlength="1" ng-maxlength="25"required>
-							<input type="text" placeholder="Job title" ng-model="job_title" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Tedious task" ng-model="tedious_task" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Dirty task" ng-model="dirty_task" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Useless skill" ng-model="useless_skill" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Adjective" ng-model="adjective" ng-minlength="1" ng-maxlength="25" required>
-							<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuous_celebrity" ng-minlength="1" ng-maxlength="25" required>
-							<input type="number" min="1" placeholder="Huge number" ng-model="huge_number" required>
+							<input type="text" placeholder="Female name" ng-model="data.female_name" ng-minlength="1" ng-maxlength="25"required>
+							<input type="text" placeholder="Job title" ng-model="data.job_title" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Tedious task" ng-model="data.tedious_task" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Dirty task" ng-model="data.dirty_task" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Celebrity" ng-model="data.celebrity" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Useless skill" ng-model="data.useless_skill" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Adjective" ng-model="data.adjective" ng-minlength="1" ng-maxlength="25" required>
+							<input type="text" placeholder="Obnoxious celebrity" ng-model="data.obnoxiuous_celebrity" ng-minlength="1" ng-maxlength="25" required>
+							<input type="number" min="2" placeholder="Huge number" ng-model="data.huge_number" required>
 						<button ng-disabled="mlForm.$invalid" type="submit">Generate My Mad Lib</button>
 					</form>
 				</div>
 			</div>
 			<div class="madlibs" ng-if="showMadLibs">
-				<p><span>{{female_name}} </span>was a <span>{{job_name}} </span>who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tedious_task}} </span>and<span> {{dirty_task}}</span>. So, <span> {{female_name}} </span>met with her life mentor <span> {{celebrity}} </span> who told her to learn how to <span> {{useless_skill}} </span> with Thinkful. Thinkful didn't offer a course on <span> {{useless_skill}} </span> so she studied programming instead.</p>
+				<p><span>{{data.female_name}} </span>was a <span>{{data.job_name}} </span>who loved technology. Although she loved parts of her job, she absolutely hated <span>{{data.tedious_task}} </span>and<span> {{data.dirty_task}}</span>. So, <span> {{data.female_name}} </span>met with her life mentor <span> {{data.celebrity}} </span> who told her to learn how to <span> {{data.useless_skill}} </span> with Thinkful. Thinkful didn't offer a course on <span> {{data.useless_skill}} </span> so she studied programming instead.</p>
 				
-				<p>What a great decision! With her new skills, <span> {{female_name}} </span>built a(n) <span> {{adjective}} </span> robot named <span> {{obnoxiuous_celebrity}} </span>that not only loved <span> {{dirty_task}} </span> but did it <span> {{huge_number}} </span>times faster!</p>
+				<p>What a great decision! With her new skills, <span> {{data.female_name}} </span>built a(n) <span> {{data.adjective}} </span> robot named <span> {{data.obnoxiuous_celebrity}} </span>that not only loved <span> {{data.dirty_task}} </span> but did it <span> {{data.huge_number}} </span>times faster!</p>
 				<button id="reset" ng-click="resetForm()">Reset My Mad Lib</button>
 			</div>
 		</div>

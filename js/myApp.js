@@ -13,5 +13,6 @@ angular.module('myApp', [])
 		$scope.resetForm = function() {
 			$scope.showMadLibs = false;
 			mlForm.reset();
+			$scope.data = {};
 		};
 	})
